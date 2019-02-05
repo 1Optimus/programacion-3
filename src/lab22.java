@@ -2,11 +2,15 @@
 import javax.swing.JOptionPane;
 
 /**
- *
  * @author Ricardo Perez
+ * programa, que lleva el control de una nomina, los nombres, salarios, estan en vectore, para agarrarlos random
+ * el llenado de la matriz es por medio de los vectores
  */
 public class lab22 extends javax.swing.JFrame {
-    //declaracion de todas mas matris a usarse, inlcuido matriz de totales
+    /*declaracion de todas mas matris a usarse, inlcuido matriz de totales
+    *vectores nombre y apelido usados para generas nombres random, y el salario para obtenerlo random
+    *el vector total es para el total de los departamentos
+    */
       String [][] matPrincipal= new String[10][7];
     String [] vectNombre= new String[10];
     String [] vectApellido= new String[10];
@@ -163,6 +167,7 @@ public class lab22 extends javax.swing.JFrame {
        // por medio de variables se generan numeros random, para obtener datos, y obtener asi numeros a la azar para llenar la tabla
         int rmdNombre,rmdApellido,rmdSalario,rmdDeduc,rmdPercep,rmdDepto;
         for(int i=0;i<=9;i++){
+            //numero random para el llenado de la tabla, tambien esta salario y el departamento al que pertenece
            rmdNombre=(int)(Math.random()*9);
            rmdApellido=(int)(Math.random()*9);           
         matPrincipal[i][1]=vectNombre[rmdNombre]+" "+vectApellido[rmdApellido];
@@ -194,7 +199,7 @@ public class lab22 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnrandomActionPerformed
 
     private void btncalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncalcularActionPerformed
-        //se hacen las suma del salario liquido y para los totales del departamento
+        //se hacen las suma del salario liquido y para los totales del departamento, obtiene los valores de la matriz hacia el vector total
         int itTotal;        
         for(int i=0;i<=9;i++){
             itTotal=Integer.parseInt(matPrincipal[i][2])-Integer.parseInt(matPrincipal[i][3])+Integer.parseInt(matPrincipal[i][4]);

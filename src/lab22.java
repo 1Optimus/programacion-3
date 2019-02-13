@@ -2,7 +2,7 @@
 import javax.swing.JOptionPane;
 
 /**
- * @author Ricardo Perez
+ * @author Ricardo Perez 1255
  * programa, que lleva el control de una nomina, los nombres, salarios, estan en vectore, para agarrarlos random
  * el llenado de la matriz es por medio de los vectores
  */
